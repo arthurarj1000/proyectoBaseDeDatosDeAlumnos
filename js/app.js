@@ -1,4 +1,6 @@
-class Alumno {
+// Clase Alumno (código anterior)
+class Alumno 
+{
     constructor(nombre, apellidos, edad) 
     {
         this.nombre = nombre;
@@ -39,34 +41,7 @@ class Alumno {
     }
 }
 
-// Clase Alumno (código anterior)
-
-// Función para dar de alta un nuevo alumno
-function darDeAltaAlumno() {
-    const nombre = prompt("Ingrese el nombre del alumno:");
-    const apellidos = prompt("Ingrese los apellidos del alumno:");
-    const edad = parseInt(prompt("Ingrese la edad del alumno:"));
-
-    const nuevoAlumno = new Alumno(nombre, apellidos, edad);
-    return nuevoAlumno;
-}
-
-// Ejemplo de alta de alumnos
-const listaDeAlumnos = [];
-
-// Pedir al usuario que ingrese nuevos alumnos
-while (true) {
-    const nuevoAlumno = darDeAltaAlumno();
-    listaDeAlumnos.push(nuevoAlumno);
-
-    const continuar = confirm("¿Desea dar de alta otro alumno?");
-    if (!continuar) {
-        break;
-    }
-}
-
-// Mostrar la lista de alumnos
-console.log("Lista de Alumnos:");
-for (const alumno of listaDeAlumnos) {
-    console.log(`Nombre: ${alumno.nombre} ${alumno.apellidos}, Edad: ${alumno.edad}`);
+function Alumnos_Page()
+{
+    window.location.href = "alumnos.html";
 }
