@@ -28,9 +28,7 @@ const validar = () => {
 
 validation.addEventListener('click', validar); //acceder al input del botón Validar del HTML
 
-const alumnosAlta = () => {
-    //aqui va el código para que nos mande a la otra página
-    window.location.href = 'alumnosAlta.html';
-}
-
-dataBase.addEventListener('click', alumnosAlta); //acceder al input del botón Alumnos Alta del HTML
+    //Aquí va el código para que nos mande a la otra página 
+document.getElementById('dataBase').addEventListener('click', () => {
+    window.location.href = 'alumnosAlta.html';//acceder al input del botón Alumnos Alta del HTML
+});

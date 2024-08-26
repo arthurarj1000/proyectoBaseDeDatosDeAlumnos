@@ -15,11 +15,47 @@
 </head>
 <body>
     <main>
-        <h1>Alumnos:</h1>
-        <div class="col-md-4">
-          <button id="erase" class="btn btn-primary" type="submit">Borrar todo</button>
-          <button id="back" class="btn btn-primary" type="submit">Regresar</button>
-      </div>
+        <h1>Base de datos de Alumnos:</h1>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">            
+                  <button id="back" class="btn btn-primary" type="submit">Regresar</button>
+                </li>
+                <li class="nav-item">
+                  <button id="erase" class="btn btn-primary" type="submit">Borrar todo</button>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                </li>
+                <li> 
+                  <a class="nav-link active" aria-disabled="page">Crear grupo</a>                
+                </li>
+              </ul>
+              <ul class="navbar-nav me-2">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Filtro
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Nombre</a></li>
+                    <li><a class="dropdown-item" href="#">Apellidos</a></li>
+                    <li><a class="dropdown-item" href="#">Edad</a></li>
+                    <li><a class="dropdown-item" href="#">Materias</a></li>
+                    <li><a class="dropdown-item" href="#">Calificación</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Número de lista</a></li>
+                  </ul>
+                </li>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" id="searchBox" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success"  id="searchButton" type="submit">Search</button>
+                </form>
+              </ul>
+            </div>
+          </div>
+        </nav>
         <table class="table">
             <thead>
                 <tr>
