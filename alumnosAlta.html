@@ -39,13 +39,15 @@
                     Filtro
                   </a>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Nombre</a></li>
-                    <li><a class="dropdown-item" href="#">Apellidos</a></li>
-                    <li><a class="dropdown-item" href="#">Edad</a></li>
-                    <li><a class="dropdown-item" href="#">Materias</a></li>
-                    <li><a class="dropdown-item" href="#">Calificación</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Número de lista</a></li>
+                    <select id="filterType" class="form-select">
+                      <option value="general">General</option>
+                      <option value="nombre">Nombre</option>
+                      <option value="apellidos">Apellidos</option>
+                      <option value="edad">Edad</option>
+                      <option value="materias">Materias</option>
+                      <option value="calificaciones">Calificación</option>
+                      <option value="númeroDeLista">Número de lista #</option>
+                  </select>
                   </ul>
                 </li>
                 <form class="d-flex" role="search">
