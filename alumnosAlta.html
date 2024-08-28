@@ -16,7 +16,7 @@
 <body>
     <main>
         <h1>Base de datos de Alumnos:</h1>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
           <div class="container-fluid">
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -27,13 +27,11 @@
                   <button id="erase" class="btn btn-primary" type="submit">Borrar todo</button>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                </li>
-                <li> 
-                  <a class="nav-link active" aria-disabled="page">Crear grupo</a>                
+                  <button id="create" class="btn btn-primary" type="submit">Crear grupo</button>            
                 </li>
               </ul>
               <ul class="navbar-nav me-2">
+                <button type="button" class="btn btn-info" id="order">↑↓</button>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Filtro
@@ -47,12 +45,12 @@
                       <option value="materias">Materias</option>
                       <option value="calificaciones">Calificación</option>
                       <option value="númeroDeLista">Número de lista #</option>
-                  </select>
+                    </select>
                   </ul>
                 </li>
                 <form class="d-flex" role="search">
-                  <input class="form-control me-2" type="search" id="searchBox" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success"  id="searchButton" type="submit">Search</button>
+                  <input class="form-control me-2" type="search" id="searchBox" placeholder="Buscar" aria-label="Search">
+                  <button class="btn btn-outline-success"  id="searchButton" type="submit">Buscar</button>
                 </form>
               </ul>
             </div>

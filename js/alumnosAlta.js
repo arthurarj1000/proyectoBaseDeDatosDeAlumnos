@@ -1,10 +1,12 @@
 const searchBox = document.getElementById('searchBox');
 const searchButton = document.getElementById('searchButton');
 const tablaAlumnos = document.getElementById('tabla-alumnos');
-const filter = document.getElementById('filterType'); // Obtener el filtro seleccionado
+const filterType = document.getElementById('filterType'); // Obtener el filtro seleccionado
+const order = document.getElementById('order'); // Obtener el encabezado de la columna de calificaciones
 
 let datosAlumnos = JSON.parse(localStorage.getItem('alumnosDB')) || [];
 let alumnosFiltrados = [...datosAlumnos]; // Array para mantener el estado de la búsqueda
+let ordenAscendente = true; // Estado para controlar el orden
 
 // Función para mostrar los alumnos en la tabla
 const mostrarAlumnos = (alumnos) => {
@@ -18,7 +20,7 @@ const mostrarAlumnos = (alumnos) => {
             <td>${alumno.edad}</td>
             <td>${alumno.materias}</td>
             <td>${alumno.calificaciones}</td>
-            <td><button type="button" class="btn btn-danger eliminar" data-index="${index}">Eliminar</button></td>
+            <td><button type="button" class="btn btn-danger eliminar" id="eliminate" data-index="${index}">Eliminar</button></td>
         `;
         tablaAlumnos.appendChild(fila);
     });
@@ -32,11 +34,11 @@ const search = (event) => {
     event.preventDefault();
 
     const query = searchBox.value.toLowerCase();
-    const filtroSeleccionado = filter.value; // Obtener el filtro seleccionado
+    const filtroSeleccionado = filterType.value; // Obtener el filtro seleccionado
 
     // Filtrar los alumnos en función del filtro seleccionado y la consulta de búsqueda
     alumnosFiltrados = datosAlumnos.filter((alumno, index) => {
-        if (filtroSeleccionado === 'general') {
+        if (filtroSeleccionado === 'todos') {
             // Búsqueda general en todos los campos
             return alumno.nombre.toLowerCase().includes(query) ||
                    alumno.apellidos.toLowerCase().includes(query) ||
@@ -79,6 +81,21 @@ tablaAlumnos.addEventListener('click', function(event) {
             mostrarAlumnos(alumnosFiltrados);
         }
     }
+});
+
+// Evento para ordenar por calificaciones
+order.addEventListener('click', () => {
+    ordenAscendente = !ordenAscendente; // Cambiar el estado del orden
+
+    alumnosFiltrados.sort((a, b) => {
+        if (ordenAscendente) {
+            return a.calificaciones - b.calificaciones; // Orden ascendente
+        } else {
+            return b.calificaciones - a.calificaciones; // Orden descendente
+        }
+    });
+
+    mostrarAlumnos(alumnosFiltrados);
 });
 
 // Botón para borrar todos los datos y recargar la página
