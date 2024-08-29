@@ -26,9 +26,15 @@
                 <li class="nav-item">
                   <button id="erase" class="btn btn-primary" type="submit">Borrar todo</button>
                 </li>
-                <li class="nav-item">
-                  <button id="create" class="btn btn-primary" type="submit">Crear grupo</button>            
-                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Cuántos grupos deseas crear?
+                  </a>
+                  <ul class="dropdown-menu">
+                      <input class="form-control me-2" type="number" id="quantityGroup" placeholder="Cantidad" aria-label="Search">
+                  </ul>
+                </li> 
+                <button id="create" class="btn btn-primary" type="submit">Crear grupo</button>
               </ul>
               <ul class="navbar-nav me-2">
                 <button type="button" class="btn btn-info" id="order">↑↓</button>
@@ -50,7 +56,7 @@
                 </li>
                 <form class="d-flex" role="search">
                   <input class="form-control me-2" type="search" id="searchBox" placeholder="Buscar" aria-label="Search">
-                  <button class="btn btn-outline-success"  id="searchButton" type="submit">Buscar</button>
+                  <button class="btn btn-outline-success" id="searchButton" type="submit">Buscar</button>
                 </form>
               </ul>
             </div>
@@ -69,6 +75,9 @@
             </thead>
             <tbody id="tabla-alumnos">
                 <!-- Los datos se agregarán aquí mediante JavaScript -->
+            </tbody>
+            <tbody id="tabla-grupos">
+                <!-- Los grupos se agregarán aquí -->
             </tbody>
         </table>
     </main>
