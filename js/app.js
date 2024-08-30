@@ -23,6 +23,7 @@ const validar = () => {
         datosAlumnos.push(alumno); // Se guardan en el array el nuevo alumno
         localStorage.setItem('alumnosDB', JSON.stringify(datosAlumnos)); // Se guarda en LocalStorage
         console.log(datosAlumnos);
+        alert("Alumno validado correctamente.");
     }
 };
 

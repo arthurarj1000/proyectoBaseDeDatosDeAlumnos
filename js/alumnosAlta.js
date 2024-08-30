@@ -156,6 +156,7 @@ tablaAlumnos.addEventListener('click', function(event) {
 const borrarTodo = () => {
     localStorage.clear();
     window.location.reload();
+    alert("Todo alumno validado se ha borrado.");
 };
 document.getElementById('erase').addEventListener('click', borrarTodo);
 

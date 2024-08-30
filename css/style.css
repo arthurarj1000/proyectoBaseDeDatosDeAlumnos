@@ -5,3 +5,31 @@
 #button{
     margin: 3.5px;
 }
+
+body {
+    background-image: url('../assets/images/instituto-mexico-roma-instalaciones-deportivas-1024x683.jpg');
+    background-size: cover; /* Ajusta para cubrir toda la pantalla */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen */
+    background-attachment: fixed; /* Fija el fondo para que no se mueva al hacer scroll */
+}
+
+#nameT{
+    color: white;
+}
+
+#surnameT{
+    color: white;
+}
+
+#ageT{
+    color: white;
+}
+
+#classesT{
+    color: white;
+}
+
+#gradesT{
+    color:white;
+}
