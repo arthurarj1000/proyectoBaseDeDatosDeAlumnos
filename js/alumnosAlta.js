@@ -119,6 +119,7 @@ const crearGrupos = () => {
             tablaGrupo.appendChild(fila);
         });
     }
+    alert("Grupos creados exitosamente.");
 };
 
 // Función para calcular el promedio de un grupo
@@ -149,6 +150,7 @@ tablaAlumnos.addEventListener('click', function(event) {
             alumnosFiltrados.splice(index, 1);
             mostrarAlumnos(alumnosFiltrados);
         }
+        alert("Alumno elimido exitosamente de la base de datos.");
     }
 });
 
@@ -156,7 +158,7 @@ tablaAlumnos.addEventListener('click', function(event) {
 const borrarTodo = () => {
     localStorage.clear();
     window.location.reload();
-    alert("Todo alumno validado se ha borrado.");
+    alert("Toda la base de datos se ha borrado exitosamente.");
 };
 document.getElementById('erase').addEventListener('click', borrarTodo);
 

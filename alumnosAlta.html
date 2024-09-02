@@ -12,19 +12,20 @@
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <!-- Cuarto nuestro script-->
     <script defer src="./js/alumnosAlta.js"></script>
+    <link rel="icon" href="./assets/icons/png-transparent-teacher-logo-school-national-primary-school-spanish-lake-elementary-school-fifth-grade-orlando-orange-county-public-schools.png" type="image/png">
 </head>
 <body>
     <main>
-        <h1>Base de datos de Alumnos:</h1>
+        <h1>Base de datos de colegio Ballesteros:</h1>
         <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
           <div class="container-fluid">
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">            
-                  <button id="back" class="btn btn-primary" type="submit">Regresar</button>
+                  <button id="back" class="btn btn-primary" type="submit">Menú principal</button>
                 </li>
                 <li class="nav-item">
-                  <button id="erase" class="btn btn-primary" type="submit">Borrar todo</button>
+                  <button id="erase" class="btn btn-danger eliminar" type="submit">Borrar toda la base de datos</button>
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -34,7 +35,7 @@
                       <input class="form-control me-2" type="number" id="quantityGroup" placeholder="Cantidad" aria-label="Search">
                   </ul>
                 </li> 
-                <button id="create" class="btn btn-primary" type="submit">Crear grupo</button>
+                <button id="create" class="btn btn-warning" type="submit">Crear grupo</button>
               </ul>
               <ul class="navbar-nav me-2">
                 <button type="button" class="btn btn-info" id="order">↑↓</button>

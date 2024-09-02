@@ -24,6 +24,8 @@ const validar = () => {
         localStorage.setItem('alumnosDB', JSON.stringify(datosAlumnos)); // Se guarda en LocalStorage
         console.log(datosAlumnos);
         alert("Alumno validado correctamente.");
+    }else{
+        alert("Por favor ingrese más datos del alumno.")
     }
 };
 
